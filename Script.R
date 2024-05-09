@@ -27,5 +27,11 @@ precio_medio_producto<- datos %>%
   summarize(Precio_medio = mean(Price))
 
 
+#9
+Num_productos_pedido<- datos %>% 
+  group_by(Invoice) %>% 
+  summarize(Numero_productos = sum(Quantity))
+
+
 
 
