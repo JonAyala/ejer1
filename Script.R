@@ -33,5 +33,10 @@ Num_productos_pedido<- datos %>%
   summarize(Numero_productos = sum(Quantity))
 
 
+#10
+Precio_pedido<- datos %>% 
+  group_by(Invoice) %>% 
+  summarize(Precio_pedido = sum(Price*Quantity))
+
 
 
